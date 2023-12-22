@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <script type="text/javascript" defer src="./index.js"></script>
+        <script type="text/javascript" defer src="./map.js"></script>
+        <link rel="stylesheet" type="text/css" href="./main.css"></link>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            Path Finder Illustration
+
+            <p id="key"></p>
+            <button id="start">Start</button>
+        </header>
+
+        <canvas id="canvas" width="1550" height="770"></canvas>
+
+        <div id="popup-bg">
+            <div id="popup">
+                <p>Draw...</p>
+                <div class="walls">
+                    <p class="label walls">Walls:</p>
+                    <p>Mouse Left Click</p>
+                    <b>/</b>
+                    <p>Move</p>
+                </div>
+                <div class="start">
+                    <p class="label start">Start Position:</p>
+                    <p>Shift</p>
+                    <b>+</b>
+                    <p>S</p>
+                    <b>+</b>
+                    <p>Left Mouse Click</p>
+                </div>
+                <div class="destination">
+                    <p class="label destination">Destination:</p>
+                    <p>Shift</p>
+                    <b>+</b>
+                    <p>D</p>
+                    <b>+</b>
+                    <p>Left Mouse Click</p>
+
+                </div>
+                
+                <p>Or remove with...</p>
+
+                <div class="remove">
+                    <p>Right Mouse Click</p>
+                    <b>/</b>
+                    <p>Right Mouse Click & Move</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

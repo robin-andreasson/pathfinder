@@ -1,0 +1,117 @@
+* { 
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+html, body { 
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    /*background: radial-gradient(circle, rgba(226,141,96,1) 0%, rgba(195,141,158,1) 33%, rgba(65,179,163,1) 66%, rgba(133,220,176,1) 99%);*/
+    /*background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);*/
+    background-image: linear-gradient(0deg, white 0%, #fbc2eb 100%);
+
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+body {
+    /*display: flex;*/
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header { 
+    width: 100%;
+    height: 120px;
+    background-color: #F6F6F6;
+    box-shadow: 0 3px 5px 0 rgb(0 0 0 / 0.1), 0 3px 3px -1px rgb(0 0 0 / 0.1);
+    margin: 15px;
+    border-radius: 15px;
+    color: #FBC2EB;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    font-size: 30px;
+}
+
+#canvas {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 800px;
+}
+
+
+#popup-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(0, 0, 0, 0.2);
+}
+
+#popup {
+    width: 400px;
+    height: 450px;
+    background: white;
+
+    border-radius: 15px;
+    box-shadow: 0 5px 5px 2px rgb(0 0 0 / 0.1);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#popup > div {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+}
+
+#popup > div > b {
+    color: red !important;
+}
+
+#popup > .walls > b {
+    color: black;
+}
+
+#popup > .remove > b {
+    color: red;
+}
+
+#popup > .start > b {
+    color: #80FF00;
+}
+
+#popup > .destination > b {
+    color: purple;
+}
+
+.label {
+    padding: 3px 6px 3px 6px;
+    transform: translate(-5px, -4px);
+
+    border-radius: 4px;
+}
