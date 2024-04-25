@@ -11,7 +11,8 @@ html, body {
     overflow-y: hidden;
     /*background: radial-gradient(circle, rgba(226,141,96,1) 0%, rgba(195,141,158,1) 33%, rgba(65,179,163,1) 66%, rgba(133,220,176,1) 99%);*/
     /*background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);*/
-    background-image: linear-gradient(0deg, white 0%, #fbc2eb 100%);
+    /*#fbc2eb */
+    background-image: linear-gradient(120deg, white 0%, #c7fffd 100%);
 
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
@@ -19,20 +20,20 @@ html, body {
 }
 
 body {
-    /*display: flex;*/
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 header { 
-    width: 100%;
+    position: relative;
+    width: 1500px;
     height: 120px;
-    background-color: #F6F6F6;
-    box-shadow: 0 3px 5px 0 rgb(0 0 0 / 0.1), 0 3px 3px -1px rgb(0 0 0 / 0.1);
-    margin: 15px;
+
+    transform: translate(-25px, 0);
+    margin: 15px 0 15px 0; 
     border-radius: 15px;
-    color: #FBC2EB;
 
 
     display: flex;
@@ -53,7 +54,7 @@ header {
 }
 
 
-#popup-bg {
+#tutorial-bg {
     position: absolute;
     left: 0;
     top: 0;
@@ -68,10 +69,13 @@ header {
     background-color: rgb(0, 0, 0, 0.2);
 }
 
-#popup {
-    width: 400px;
-    height: 450px;
+#tutorial {
+    width: 300px;
+    height: 400px;
     background: white;
+    background-image: linear-gradient(-10deg, white 0%, white 50%, #c7fffd 100%);
+
+    border: 1px solid gray;
 
     border-radius: 15px;
     box-shadow: 0 5px 5px 2px rgb(0 0 0 / 0.1);
@@ -83,30 +87,18 @@ header {
     gap: 20px;
 }
 
-#popup > div {
+#tutorial > div {
     display: flex;
     flex-direction: row;
     gap: 4px;
 }
 
-#popup > div > b {
+#tutorial > div > b {
     color: red !important;
 }
 
-#popup > .walls > b {
-    color: black;
-}
-
-#popup > .remove > b {
-    color: red;
-}
-
-#popup > .start > b {
-    color: #80FF00;
-}
-
-#popup > .destination > b {
-    color: purple;
+#tutorial > div > img {
+    transform: translate(0px, -4px)
 }
 
 .label {
@@ -114,4 +106,47 @@ header {
     transform: translate(-5px, -4px);
 
     border-radius: 4px;
+}
+
+
+.hidden {
+    display: none !important;
+}
+
+
+#size {
+    display: absolute;
+    left: 0;
+}
+
+#settings {
+    position: absolute;
+    transform: translate(100px, 0);
+    right: 25%;
+}
+
+#algorithm {
+    display: flex;
+    flex-direction: column;
+
+    font-size: 16px;
+    color: black;
+}
+
+
+button {
+    padding: 2px 10px 2px 10px;
+    border-radius: 3px;
+    border: 1px solid black;
+    background-color: white;
+}
+
+#start {
+    color: green;
+    border-color: green;
+}
+
+#clear {
+    color: red;
+    border-color: red;
 }

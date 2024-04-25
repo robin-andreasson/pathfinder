@@ -3,8 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title></title>
-        <script type="text/javascript" defer src="./index.js"></script>
-        <script type="text/javascript" defer src="./map.js"></script>
+        <script type="module" defer src="./index.js"></script>
         <link rel="stylesheet" type="text/css" href="./main.css"></link>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,30 +11,41 @@
     </head>
     <body>
         <header>
-            Path Finder Illustration
+            Pathfinder Visualization
 
-            <p id="key"></p>
-            <button id="start">Start</button>
+            <div id="settings">
+                <button id="start">Start</button>
+                <button id="clear">Clear</button>
+
+                <div id="algorithm">
+                    <div>
+                        <input type="radio" id="dijkstra" name="algorithm" value="dijkstra" checked="checked">
+                        <label for="dijkstra">Dijkstra</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="Astar" name="algorithm" value="astar">
+                        <label for="Astar">A*</label>
+                    </div>
+                </div>
+            </div>
         </header>
 
         <canvas id="canvas" width="1550" height="770"></canvas>
 
-        <div id="popup-bg">
-            <div id="popup">
-                <p>Draw...</p>
+        <div id="tutorial-bg" class="hidden">
+            <div id="tutorial">
+                <h3>Set...</h3>
                 <div class="walls">
                     <p class="label walls">Walls:</p>
-                    <p>Mouse Left Click</p>
-                    <b>/</b>
-                    <p>Move</p>
+                    <img src="assets/left-click.png" width="25px" height="25px"/>
                 </div>
                 <div class="start">
-                    <p class="label start">Start Position:</p>
+                    <p class="label start">Origin:</p>
                     <p>Shift</p>
                     <b>+</b>
                     <p>S</p>
                     <b>+</b>
-                    <p>Left Mouse Click</p>
+                    <img src="assets/left-click.png" width="25px" height="25px"/>
                 </div>
                 <div class="destination">
                     <p class="label destination">Destination:</p>
@@ -43,17 +53,22 @@
                     <b>+</b>
                     <p>D</p>
                     <b>+</b>
-                    <p>Left Mouse Click</p>
+                    <img src="assets/left-click.png" width="25px" height="25px"/>
 
                 </div>
                 
-                <p>Or remove with...</p>
+                <h4>Or remove with...</h4>
 
                 <div class="remove">
-                    <p>Right Mouse Click</p>
-                    <b>/</b>
-                    <p>Right Mouse Click & Move</p>
+                    <img src="assets/right-click.png" width="25px" height="25px"/>
                 </div>
+            </div>
+        </div>
+
+
+        <div id="settings-bg" class="hidden">
+            <div id="settings">
+
             </div>
         </div>
     </body>
